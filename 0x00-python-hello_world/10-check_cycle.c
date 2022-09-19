@@ -9,15 +9,35 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *h = malloc(sizeof(listint_t));
+	listint_t *pprev;
+	listint_t *nprev;
 
-	if (list == NULL)
-		return ('\0');
-	if (h == NULL)
-		return ('\0');
+	pprev = list;
+	prev = list;
+	while (pprev != NULL && pprev->next != NULL && list != NULL)
+	{
+		list = list->next;
+		pprev = pprev->next->next;
 
-	h = list->next;
-	while (h != NULL && h != list)
-		h = h->next;
-	return (h == list);
+		if (list == pprev)
+		{
+			list = nprev;
+			nprev =  pprev;
+			while (1)
+			{
+				pprev = nprev;
+				while (pprev->next != list && pprev->next != nprev)
+				{
+					pprev = pprev->next;
+				}
+				if (pprev->next == list)
+					break;
+
+				list = list->next;
+			}
+			return (1);
+		}
+	}
+
+	return (0);
 }
