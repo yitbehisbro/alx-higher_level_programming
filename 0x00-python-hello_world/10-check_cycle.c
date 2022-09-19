@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 	listint_t *nprev;
 
 	pprev = list;
-	prev = list;
+	nprev = list;
 	while (pprev != NULL && pprev->next != NULL && list != NULL)
 	{
 		list = list->next;
@@ -38,6 +38,5 @@ int check_cycle(listint_t *list)
 			return (1);
 		}
 	}
-
 	return (0);
 }
