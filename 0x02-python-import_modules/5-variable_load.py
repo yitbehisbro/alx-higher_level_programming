@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 from variable_load_5 import a as num
-print("{}".format(num))
+if __name_ == "__main__":
+    print("{}".format(num))
