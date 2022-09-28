@@ -51,11 +51,11 @@ void print_python_bytes(PyObject *pyObject)
  */
 void print_python_list(PyObject *pyObject)
 {
-	long int length, i;
+	long int length, i = 0;
 	PyListObject *pyListObject;
 	PyObject *pyObj;
 
-	length = ((PyVarObject *)(pyObject))->ob_size;
+	size = ((PyVarObject *)(pyObject))->ob_size;
 	pyListObject = (PyListObject *)pyObject;
 
 	printf("[*] Python list info\n");
