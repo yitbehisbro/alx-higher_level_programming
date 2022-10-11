@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 class Square:
-    """This class do calculation for square. """
+    """This class do calculation for square.
+    """
     def __init__(self, size=0):
         """This is the intialization builtin fuction.
         Args:
@@ -17,7 +18,8 @@ class Square:
             raise TypeError("size must be an integer")
 
     def area(self):
-        """Returns the size of the area"""
+        """Returns the size of the area.
+        """
         return self.__size * self.__size
 
     @property
