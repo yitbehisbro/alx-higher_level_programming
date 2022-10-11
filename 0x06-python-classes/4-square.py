@@ -1,6 +1,8 @@
+#!/usr/bin/python3
 """ This module does the calculation for area.
 """
-#!/usr/bin/python3
+
+
 class Square:
     """ This class do calculation for square.
     """
