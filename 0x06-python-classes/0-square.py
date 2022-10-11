@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-class Square:
-    pass
+""" This module does the calculation for area.
+"""
 
+
+class Square:
     """This class does nothing to the screen."""
+    pass
