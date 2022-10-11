@@ -51,6 +51,28 @@ class Square:
         else:
             raise TypeError("size must be an integer")
 
+    @property
+    def position(self):
+        """ Method that retrives the position value
+        """
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """ Method that sets the position value
+        """
+        if not isinstance(value, tuple):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[0], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
+
     def my_print(self):
         """ Prints the square with hash tag.
         """
