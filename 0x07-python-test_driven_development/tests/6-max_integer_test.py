@@ -23,11 +23,4 @@ class TestMaxInteger(unittest.TestCase):
                                             7141143787]), 7141143787)
 
     def test_float(self):
-        self.assertAlmostEqual(max_integer([1, 2, 3, 4.89]), 4)
-
-    def test_empty_list(self):
-        self.assertAlmostEqual(max_integer([]), None)
-
-    def test_raise(self):
-        self.assertRaises(TypeError, max_integer, max_integer([1, 2, 3, "4"]))
-        self.assertRaises(KeyError, max_integer, max_integer({'a': 1, 'b': 2}))
+        self.assertAlmostEqual(max_integer([1, 2, 3, 4.89]), 4.89)
