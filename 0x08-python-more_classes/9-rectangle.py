@@ -125,6 +125,7 @@ class Rectangle:
         if isinstance(size, int):
             if size < 0:
                 raise ValueError("size must be >= 0")
+            else:
+                return cls(size, size)
         else:
             raise TypeError("size must be an integer")
-        return cls(size, size)
