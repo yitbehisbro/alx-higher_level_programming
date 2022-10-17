@@ -8,12 +8,6 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-    @classmethod
-    def square(cls, size=0):
-        """ Class method to print the area when width == height == size
-        """
-        return cls(size, size)
-
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """ Compares the two passed rectangle
@@ -34,19 +28,31 @@ class Rectangle:
         return rect_2
 
     def __init__(self, width=0, height=0):
-        """Initializes the rectangle"""
+        """ This is the intialization builtin fuction.
+        Args:
+            width (int): the width of rectangles
+            height (int): the height of rectangles
+        """
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        """getter for the private instance attribute width"""
+        """ This is the function that retrieve width.
+        Returns: the retrived width
+        """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setter for the private instance attribute width"""
+        """ This is the function that set size.
+        Args:
+            value (int): the width of rectangles
+        Raises:
+            ValueError: raises the value error exception
+            TypeError: raises the type error in case -ve number
+        """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -55,12 +61,20 @@ class Rectangle:
 
     @property
     def height(self):
-        """getter for the private instance attribute height"""
+        """ This is the function that retrieve size.
+        Returns: the retrived height
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter for the private instance attribute height"""
+        """ This is the function that set height.
+        Args:
+            value (int): the height of rectangles
+        Raises:
+            ValueError: raises the value error exception
+            TypeError: raises the type error in case -ve number
+        """
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -100,3 +114,9 @@ class Rectangle:
         """
         print("Bye rectangle...", end="\n")
         Rectangle.number_of_instances -= 1
+
+    @classmethod
+    def square(cls, size=0):
+        """ Class method to print the area when width == height == size
+        """
+        return cls(size, size)
