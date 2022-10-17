@@ -8,61 +8,64 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-    def __init__(self, width=0, height=0):
-        """ This is the intialization builtin fuction.
-        Args:
-            width (int): the width of rectangles
-            height (int): the height of rectangles
+    @classmethod
+    def square(cls, size=0):
+        """ Class method to print the area when width == height == size
         """
-        self.height = height
+        return cls(size, size)
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """ Compares the two passed rectangle
+            Args:
+                rect_1 (Rectangle): area of rectangle 1
+                rect_2 (Rectangle): area of rectangle 2
+            Raises:
+                TypeError: if the args are not instance of Rectangle
+            Returns:
+                The area of rectangle
+        """
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
+
+    def __init__(self, width=0, height=0):
+        """Initializes the rectangle"""
         self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
-    def height(self):
-        """ This is the function that retrieve size.
-        Returns: the retrived height
-        """
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        """ This is the function that set height.
-        Args:
-            value (int): the height of rectangles
-        Raises:
-            ValueError: raises the value error exception
-            TypeError: raises the type error in case -ve number
-        """
-        self.__height = value
-        if isinstance(self.__height, int):
-            if self.__height < 0:
-                raise ValueError("height must be >= 0")
-        else:
-            raise TypeError("height must be an integer")
-
-    @property
     def width(self):
-        """ This is the function that retrieve width.
-        Returns: the retrived width
-        """
+        """getter for the private instance attribute width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ This is the function that set size.
-        Args:
-            value (int): the width of rectangles
-        Raises:
-            ValueError: raises the value error exception
-            TypeError: raises the type error in case -ve number
-        """
-        self.__width = value
-        if isinstance(self.__width, int):
-            if self.__width < 0:
-                raise ValueError("width must be >= 0")
-        else:
+        """setter for the private instance attribute width"""
+        if type(value) is not int:
             raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        """getter for the private instance attribute height"""
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """setter for the private instance attribute height"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
 
     def area(self):
         """ Returns the area of the rectangle.
@@ -97,35 +100,3 @@ class Rectangle:
         """
         print("Bye rectangle...", end="\n")
         Rectangle.number_of_instances -= 1
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """ Compares the two passed rectangle
-            Args:
-                rect_1 (Rectangle): area of rectangle 1
-                rect_2 (Rectangle): area of rectangle 2
-            Raises:
-                TypeError: if the args are not instance of Rectangle
-            Returns:
-                The area of rectangle
-        """
-        if isinstance(rect_1, Rectangle) is False:
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if isinstance(rect_2, Rectangle) is False:
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        if int(rect_1.area()) >= int(rect_2.area()):
-            return rect_1
-        else:
-            return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """ Class method to print the area when width == height == size
-        """
-        if isinstance(size, int):
-            if size < 0:
-                raise ValueError("size must be >= 0")
-            else:
-                return cls(size, size)
-        else:
-            raise TypeError("size must be an integer")
