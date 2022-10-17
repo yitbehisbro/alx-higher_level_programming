@@ -125,4 +125,4 @@ class Rectangle:
         x = cls(size, size)
         y = cls(size, size)
 
-        return cls.bigger_or_equal(x, y)
+        return x if cls.bigger_or_equal(x, y) is x else y
