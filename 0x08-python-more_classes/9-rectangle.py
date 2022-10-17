@@ -8,25 +8,6 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """ Compares the two passed rectangle
-            Args:
-                rect_1 (Rectangle): area of rectangle 1
-                rect_2 (Rectangle): area of rectangle 2
-            Raises:
-                TypeError: if the args are not instance of Rectangle
-            Returns:
-                The area of rectangle
-        """
-        if type(rect_1) is not Rectangle:
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if type(rect_2) is not Rectangle:
-            raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1.area() >= rect_2.area():
-            return rect_1
-        return rect_2
-
     def __init__(self, width=0, height=0):
         """ This is the intialization builtin fuction.
         Args:
@@ -114,6 +95,25 @@ class Rectangle:
         """
         print("Bye rectangle...", end="\n")
         Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """ Compares the two passed rectangle
+            Args:
+                rect_1 (Rectangle): area of rectangle 1
+                rect_2 (Rectangle): area of rectangle 2
+            Raises:
+                TypeError: if the args are not instance of Rectangle
+            Returns:
+                The area of rectangle
+        """
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
 
     @classmethod
     def square(cls, size=0):
