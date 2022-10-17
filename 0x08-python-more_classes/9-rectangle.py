@@ -122,7 +122,5 @@ class Rectangle:
     def square(cls, size=0):
         """ Class method to print the area when width == height == size
         """
-        x = cls(size, size)
-        y = cls(size, size)
 
-        return x if cls.bigger_or_equal(x, y) is x else y
+        return cls(size, size)
