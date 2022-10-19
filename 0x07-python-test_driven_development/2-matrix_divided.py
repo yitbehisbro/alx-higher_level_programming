@@ -30,7 +30,8 @@ def matrix_divided(matrix, div):
 
     len_e = 0
     msg_size = "Each row of the matrix must have the same size"
-
+    if len(matrix) == 1:
+        return list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix[0:1][0]))
     for elems in matrix:
         if not elems or not isinstance(elems, list):
             raise TypeError(msg_type)
