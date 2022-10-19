@@ -30,7 +30,8 @@ def matrix_divided(matrix, div):
 
     len_e = 0
     msg_size = "Each row of the matrix must have the same size"
-
+    if len(matrix) == 1:
+        return matrix[0:0] / div
     for elems in matrix:
         if not elems or not isinstance(elems, list):
             raise TypeError(msg_type)
