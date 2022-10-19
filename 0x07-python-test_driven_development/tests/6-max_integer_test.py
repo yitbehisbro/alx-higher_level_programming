@@ -24,3 +24,18 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_float(self):
         self.assertAlmostEqual(max_integer([1, 2, 3, 4.89]), 4.89)
+
+    def test_max_at_the_beginning(self):
+        self.assertAlmostEqual(max_integer([100, 1, 3, 4.89]), 100)
+
+    def one_negative_number(self):
+        self.assertAlmostEqual(max_integer([100, -1, 3, 4.89]), 100)
+
+    def only_negative_number(self):
+        self.assertAlmostEqual(max_integer([-100, -1, -3, -4.89]), -1)
+
+    def list_of_one_element(self):
+        self.assertAlmostEqual(max_integer([-100]), -100)
+
+    def list_is_empty(self):
+        self.assertAlmostEqual(max_integer([]), 1)
