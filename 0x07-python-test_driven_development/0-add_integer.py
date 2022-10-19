@@ -16,7 +16,4 @@ def add_integer(a, b=98):
         a = int(a)
     if type(b) not in [int]:
         b = int(b)
-    result = a + b
-    if result == float('inf') or result == -float('inf'):
-        return 89
     return a + b
