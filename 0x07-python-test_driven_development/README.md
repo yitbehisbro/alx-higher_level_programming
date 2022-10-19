@@ -6,8 +6,7 @@
 <p>3. Write a function that prints a square with the character <code>#</code>.</p>
 <p>4. Write a function that prints a text with 2 new lines after each of these characters: <code>.</code>, <code>?</code> and <code>:</code></p>
 <p>5. In this task, you will write unittests for the function <code>def max_integer(list=[]):</code>.</p>
-
-<code>guillaume@ubuntu:~/0x07$ cat 6-max_integer.py
+<pre><code>guillaume@ubuntu:~/0x07$ cat 6-max_integer.py
 #!/usr/bin/python3
 """Module to find the max integer in a list
 """
@@ -51,8 +50,7 @@ max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
 guillaume@ubuntu:~/0x07$ 
-</code>
+</code></pre>
 <p>100. Write a function that multiplies 2 matrices: (without <code>NumPy</code>)</p>
 <p>101. Write a function that multiplies 2 matrices by using the module <a href="/rltoken/sXnBuOVSyhKEGt-biOyOWg" title="NumPy" target="_blank">NumPy</a></p>
 <p>102. Create a function that prints Python strings.</p>
-
