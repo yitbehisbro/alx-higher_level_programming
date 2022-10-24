@@ -26,21 +26,7 @@ class Rectangle(BaseGeometry):
 
     def __init__(self, width, height):
         """ Initalization class """
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
         self.__height = height
-        self.integer_validator(width, height)
-
-    def integer_validator(self, width, height):
-        """ Validates integer
-            Args:
-                width (int): width of the rectangle
-                height (int): height of the rectangle
-        """
-        if type(width) is not int:
-            raise TypeError("width must be an integer")
-        if type(height) is not int:
-            raise TypeError("height must be an integer")
-        if width < 0:
-            raise ValueError("width must be positive integer")
-        if height < 0:
-            raise ValueError("height must be positive integer")
