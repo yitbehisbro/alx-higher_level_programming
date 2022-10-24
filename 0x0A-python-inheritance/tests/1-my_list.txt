@@ -46,3 +46,10 @@ Try by adding float value
     >>> my_list.append(5.2)
     >>> my_list.print_sorted()
     [-1, 1, 2, 3, 4, 5, 5.2]
+
+If my list is None
+    >>> my_list = None
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+        ...
+    AttributeError: 'NoneType' object has no attribute 'print_sorted'
