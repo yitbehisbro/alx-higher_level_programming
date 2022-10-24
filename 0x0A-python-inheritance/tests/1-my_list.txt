@@ -1,0 +1,48 @@
+====================================================
+        Testcase for 1-my_list.py
+====================================================
+Import the module
+    >>> MyList = __import__('1-my_list').MyList
+
+Creating object for the class
+    >>> my_list = MyList()
+
+Appending the elements to the list
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+
+Print the given list
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Print the sorted lists of the copy
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+Print again the given list after sorting
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Try with appending a diffrent data type
+    >>> my_list.append("a")
+    >>> print(my_list)
+    [1, 4, 2, 3, 5, 'a']
+
+Print the sorted lists of the copy
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+        ...
+    TypeError: '<' not supported between instances of 'str' and 'int'
+
+Lets update 'a' to negative number
+    >>> my_list[5] = -1
+    >>> my_list.print_sorted()
+    [-1, 1, 2, 3, 4, 5]
+
+Try by adding float value
+    >>> my_list.append(5.2)
+    >>> my_list.print_sorted()
+    [-1, 1, 2, 3, 4, 5, 5.2]
