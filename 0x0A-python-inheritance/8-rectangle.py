@@ -42,5 +42,5 @@ class Rectangle(BaseGeometry):
             raise TypeError("height must be an integer")
         if width < 0:
             raise ValueError("width must be positive integer")
-        if width < 0:
+        if height < 0:
             raise ValueError("height must be positive integer")
