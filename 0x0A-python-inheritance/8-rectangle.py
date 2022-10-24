@@ -41,6 +41,6 @@ class Rectangle(BaseGeometry):
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if width < 0:
-            raise ValueError("{} must be greater than 0".format(width))
+            raise ValueError("width must be positive integer")
         if width < 0:
-            raise ValueError("{} must be greater than 0".format(height))
+            raise ValueError("height must be positive integer")
