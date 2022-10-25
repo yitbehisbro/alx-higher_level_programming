@@ -9,6 +9,4 @@ def append_write(filename="", text=""):
     counter = 0
     with open(filename, mode='a', encoding="utf-8") as files:
         files.write(text)
-    with open(filename, encoding='utf-8') as a_file:
-        counter = a_file.read()
-    return len(counter)
+    return len(text)
