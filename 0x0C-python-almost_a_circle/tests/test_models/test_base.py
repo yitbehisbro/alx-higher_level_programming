@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Testcase for Base class """
+""" Testcase for Base class module file"""
 import unittest
 from models.base import Base
 from models.square import Square

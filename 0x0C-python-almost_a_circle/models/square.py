@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" And now, the Square! module """
+""" And now, the Square! module file """
 from . import rectangle
 
 

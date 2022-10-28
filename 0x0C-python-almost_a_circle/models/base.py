@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Base class module """
+""" Base class module file """
 import json as js
 import os.path
 import csv

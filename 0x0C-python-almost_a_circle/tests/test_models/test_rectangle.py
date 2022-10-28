@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Test case for Rectangle class """
+""" Test case for Rectangle class module"""
 import unittest
 from io import StringIO
 from unittest import TestCase
