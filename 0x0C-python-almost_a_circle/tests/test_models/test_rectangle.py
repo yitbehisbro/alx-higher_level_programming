@@ -351,7 +351,7 @@ class TestRectangleSubClassMethods(unittest.TestCase):
 
     def test_load_from_json_file(self):
         """ Test load JSON file """
-        load_file = Base.load_from_file()
+        load_file = Rectangle.load_from_file()
         self.assertEqual(load_file, [])
 
     def test_load_from_json_file_2(self):
