@@ -354,6 +354,10 @@ class TestRectangleSubClassMethods(unittest.TestCase):
         load_file = Base.load_from_file()
         self.assertEqual(load_file, [])
 
+    def test_save_to_file(self):
+        """ Test load JSON file """
+        self.assertEqual(Rectangle.save_to_file([]), [])
+
     def test_load_from_json_file_2(self):
         """ Test load JSON file """
         r1 = Rectangle(5, 5)
