@@ -85,7 +85,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """ Serializes and deserializes in CSV """
-        filename = cls.__name__ + ".json"
+        filename = cls.__name__ + ".csv"
         if cls.__name__ == "Rectangle":
             list_dic = [0, 0, 0, 0, 0]
             list_keys = ['id', 'width', 'height', 'x', 'y']
@@ -110,7 +110,7 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """ Serializes and deserializes in CSV """
-        filename = cls.__name__ + ".json"
+        filename = cls.__name__ + ".csv"
         result = []
         if os.path.exists(filename) is False:
             return result
