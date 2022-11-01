@@ -401,10 +401,6 @@ class TestSquareSubClassMethods(unittest.TestCase):
 
         self.assertEqual(res, res2)
 
-    def test_save_to_file(self):
-        """ Test load JSON file """
-        self.assertEqual(Square.save_to_file([]), None)
-
     def test_value_square(self):
         """ Test value pased to Square """
         with self.assertRaises(ValueError):
