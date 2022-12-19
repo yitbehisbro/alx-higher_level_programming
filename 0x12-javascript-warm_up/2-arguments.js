@@ -1,11 +1,11 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
-
-if (argv.length > 1)
+const process = require('process');
+var args = process.argv;
+if (args.length > 1)
 {
 	console.log('Arguments found');
 }
-else if (argv.length == 1)
+else if (args.length === 1)
 {
 	console.log('Argument found');
 }
