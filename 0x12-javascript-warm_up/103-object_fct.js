@@ -6,9 +6,7 @@ const myObject = {
 console.log(myObject);
 
 function incr () {
-  let x = parseInt(myObject.value);
-  x++;
-  myObject.value = x;
+  myObject.value = myObject.value + 1;
 }
 
 incr();
