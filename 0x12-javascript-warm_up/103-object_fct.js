@@ -5,13 +5,11 @@ const myObject = {
 };
 console.log(myObject);
 
-myObject.incr = function () {
-  this.value++;
-};
+function incr () { return myObject.value++ }
 
-myObject.incr();
+incr();
 console.log(myObject);
-myObject.incr();
+incr();
 console.log(myObject);
-myObject.incr();
+incr();
 console.log(myObject);
