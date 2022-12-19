@@ -1,9 +1,9 @@
 #!/usr/bin/node
 import { argv } from 'node:process';
 
-if (argv.length <= 0)
+if (argv.length > 1)
 {
-	console.log("No argument");
+	console.log("Arguments found");
 }
 else if (argv.length == 1)
 {
@@ -11,5 +11,5 @@ else if (argv.length == 1)
 }
 else
 {
-	console.log("Arguments found");
+	console.log("No argument");
 }
