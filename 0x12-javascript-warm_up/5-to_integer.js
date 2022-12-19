@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const args = process.argv.slice(2);
+const args = process.argv;
 
 if (args[1]) {
   if (isNaN(parseInt(args[1], 10))) {
