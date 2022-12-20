@@ -1,5 +1,6 @@
 #!/usr/bin/node
 const SquareParent = require('./5-square');
+const Rectangle = require('./4-rectangle');
 
 class Square extends SquareParent {
   charPrint (c) {
@@ -11,6 +12,8 @@ class Square extends SquareParent {
         }
         console.log(string);
       }
+    } else {
+      Rectangle.print ();
     }
   }
 }
