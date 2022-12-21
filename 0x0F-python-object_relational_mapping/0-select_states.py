@@ -13,7 +13,7 @@ if __name__ == "__main__":
             )
 
     conn_cursor = conn.cursor()
-    conn_cursor.execute("SELECT * FROM states;")
+    conn_cursor.execute("SELECT * FROM states BY id ASC")
     query_rows = conn_cursor.fetchall()
     for row in query_rows:
         print(row)
