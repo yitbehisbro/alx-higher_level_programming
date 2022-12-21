@@ -16,6 +16,3 @@ if __name__ == "__main__":
     query_rows = conn_cursor.fetchall()
     for row in query_rows:
         print(row)
-
-    conn_cursor.close()
-    conn.close()
