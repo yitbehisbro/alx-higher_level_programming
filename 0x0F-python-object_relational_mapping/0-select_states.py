@@ -12,9 +12,10 @@ if __name__ == "__main__":
             db=sys.argv[3]
             )
 
-    conn_cursor = conn.cursor()
-    conn_cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    query_rows = conn_cursor.fetchall()
+	conn_cursor.execute("SELECT * FROM states ORDER BY id ASC")
+	query_rows = conn_cursor.fetchall()
+	for row in query_rows:
+		print(row)
 
-    for row in query_rows:
-        print(row)
+	conn_cursor.close()
+	conn.close()
