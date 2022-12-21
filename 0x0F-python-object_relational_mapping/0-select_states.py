@@ -6,10 +6,10 @@ import sys
 
 if __name__ == "__main__":
     conn = MySQLdb.connect(
-            port=3306,
             user=sys.argv[1],
             passwd=sys.argv[2],
-            db=sys.argv[3]
+            db=sys.argv[3],
+            port=3306
             )
 
     conn_cursor.execute("SELECT * FROM states;")
