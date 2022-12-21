@@ -13,7 +13,9 @@ if __name__ == "__main__":
             )
 
     conn_cursor = conn.cursor()
-    sql_cmd = "SELECT * FROM cities ORDER BY id ASC"
+    sql_cmd = "SELECT cities.id, cities.name, states.name \
+    FROM cities JOIN states ON cities.state_id = states.id \
+    ORDER BY id ASC"
     conn_cursor.execute(sql_cmd)
     query_rows = conn_cursor.fetchall()
     for row in query_rows:
