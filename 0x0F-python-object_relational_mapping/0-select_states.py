@@ -12,6 +12,7 @@ if __name__ == "__main__":
             port=3306
             )
 
+    conn_cursor = conn.cursor()
     conn_cursor.execute("SELECT * FROM states;")
     query_rows = conn_cursor.fetchall()
     for row in query_rows:
