@@ -18,7 +18,7 @@ if __name__ == '__main__':
     states = session.query(State).filter(State.name == search).all()
 
     if not states:
-        print("Nothing")
+        print("Not found")
 
     for i, state in enumerate(states, start=1):
         if i > 1:
