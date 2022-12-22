@@ -20,5 +20,8 @@ if __name__ == '__main__':
     if not states:
         print("Nothing")
 
-    for state in states:
-        print("{}".format(state.id))
+    for i, state in enumerate(states, start=1):
+        if i > 1:
+            sys.exit()
+        else:
+            print("{}".format(state.id))
