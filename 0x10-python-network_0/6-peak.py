@@ -4,7 +4,7 @@
 
 def find_peak(list_of_integers):
     """ Display a peak """
-    if list_of_integers == []:
+    if list_of_integers is []:
         return None
 
     length = len(list_of_integers)
