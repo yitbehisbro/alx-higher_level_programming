@@ -8,7 +8,7 @@ def find_peak(list_of_integers):
         return None
     else:
         a_peak = list_of_integers[0]
-        for i in list_of_integers:
+        for i in list_of_integers[1:]:
             if i >= a_peak:
                 a_peak = i
     return a_peak
