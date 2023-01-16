@@ -1,3 +1,3 @@
 #!/bin/bash
 #Display the size of the body in byte
-curl -sI "$1" | grep content-length | cut -d " " -f 2
+curl -sI "$1" | grep "Content-Length:" | awk '{print $2}'
