@@ -1,3 +1,3 @@
 #!/bin/bash
 #Gets the body of the response
-curl -Ls GET "$1"
+curl -sL GET "$1"
