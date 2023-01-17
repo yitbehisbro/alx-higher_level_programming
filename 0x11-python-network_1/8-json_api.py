@@ -11,7 +11,7 @@ if __name__ == "__main__":
     try:
         if sys.argv[1]:
             param['q'] = sys.argv[1]
-    except:
+    except Exception:
         pass
 
     try:
@@ -21,5 +21,5 @@ if __name__ == "__main__":
             print("[{}] {}".format(my_json.get('id'), my_json.get('name')))
         else:
             print("No result")
-    except:
+    except Exception:
         print("Not a valid JSON")
