@@ -17,6 +17,6 @@ if __name__ == "__main__":
         if result.status_code == 200:
             r = result.json()
             for i in range(0, 10):
-                print("{}: {}".format(r[i].get('sha'), r[i].get('commit').get('author').get('name')))
+                print("{}: {}".format(r[i].r['sha'], r[i].r['commit']['author']['name']))
     except Exception:
         pass
