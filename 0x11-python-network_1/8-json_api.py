@@ -8,11 +8,8 @@ import sys
 if __name__ == "__main__":
     param = {'q': ''}
 
-    try:
-        if sys.argv[1]:
-            param['q'] = sys.argv[1]
-    except Exception:
-        pass
+    if len(sys.argv) == 2:
+        param['q'] = sys.argv[1]
 
     try:
         result = requests.post("http://0.0.0.0:5000/search_user", data=param)
