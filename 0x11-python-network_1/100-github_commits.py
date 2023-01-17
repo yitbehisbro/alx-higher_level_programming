@@ -9,9 +9,9 @@ import sys
 if __name__ == "__main__":
     repo = sys.argv[1]
     user = sys.argv[2]
-    url = "https://api.github.com/repos/{}/{}/commits"
+    url = "https://api.github.com/repos/{}/{}/commits".format(user, repo)
 
-    result = requests.get(url.format(user, repo))
+    result = requests.get(url)
 
     if result.status_code == 200:
         r = result.json()
