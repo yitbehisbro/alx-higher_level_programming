@@ -11,7 +11,7 @@ if __name__ == "__main__":
     pwd = sys.argv[2]
     result = requests.get("https://api.github.com/user", auth=(usr, pwd))
     if result.status_code == 200:
-        r = requests.get("https://api.github.com/user", auth=(usr, pwd)).json()
-        print("{}".format(r["id"]))
+        result = result.json()
+        print("{}".format(result["id"]))
     else:
         print("None")
