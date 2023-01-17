@@ -9,7 +9,9 @@ import sys
 if __name__ == "__main__":
     usr = sys.argv[1]
     pwd = sys.argv[2]
+
     result = requests.get("https://api.github.com/user", auth=(usr, pwd))
+
     if result.status_code == 200:
         result = result.json()
         print("{}".format(result["id"]))
