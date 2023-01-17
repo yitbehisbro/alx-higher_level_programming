@@ -13,3 +13,5 @@ if __name__ == "__main__":
     except HTTPError as error:
         if error.code:
             print("Error code: {}".format(error.code))
+        else:
+            print("Index")
