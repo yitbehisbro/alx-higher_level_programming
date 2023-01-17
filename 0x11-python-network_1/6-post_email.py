@@ -5,5 +5,6 @@ import sys
 
 
 if __name__ == "__main__":
-    result = requests.post(sys.argv[1], data={'email': sys.argv[2]})
+    headers = {'Content-Type': 'text/plain'}
+    result = requests.post(sys.argv[1], data={'email': sys.argv[2]}, headers=headers)
     print(result.content)
