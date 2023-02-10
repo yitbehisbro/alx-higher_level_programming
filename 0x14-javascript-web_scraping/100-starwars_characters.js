@@ -2,16 +2,20 @@
 const request = require('request');
 const url = 'http://swapi.co/api/films/' + process.argv[2];
 
-request(url, function (err, response, body) {
-  if (err == null) {
-    const resp = JSON.parse(body);
-    const characters = resp.characters;
-    for (let i = 0; i < characters.length; i++) {
-      request(characters[i], function (err, response, body) {
-        if (err == null) {
-          console.log(JSON.parse(body).name);
-        }
-      });
+request.get(
+  url,
+  async (err, res, body) => {
+    if (err) console.error(err);
+    else {
+      const film = JSON.parse(body);
+
+      for (const character of film.characters) {
+        request.get(character, (err, res, body) => {
+          if (err) console.error(err);
+          const char = JSON.parse(body);
+          console.log(char.name);
+        });
+      }
     }
   }
-});
+);
