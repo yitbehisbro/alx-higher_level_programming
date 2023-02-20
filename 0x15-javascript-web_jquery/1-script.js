@@ -1,4 +1,7 @@
-const changeColor = document.getElementsByTagName("header");
-for (let i = 0; i < changeColor.length; i++) {
-  changeColor[i].style.color = "#FF0000";
-}
+$(document).ready(function() {
+  $("header").on({
+    mouseenter: function() {
+            $(this).css("color", "#FF0000");
+        }
+    });
+});
